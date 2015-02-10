@@ -1,0 +1,43 @@
+{
+  "name": "kimono",
+  "version": "0.1.0",
+  "main": "lib/kimono.js",
+  "description": "Kimono API wrapper",
+  "homepage": "https://www.kimonolabs.com/",
+  "bugs": "https://github.com/davidcaseria/kimono/issues",
+  "author": {
+    "name": "David Caseria",
+    "email": "davidcaseria@gmail.com",
+    "url": "http://davidcaseria.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidcaseria/kimono"
+  },
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "kimono",
+    "kimono",
+    "api"
+  ],
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-cli": "^1.9.0",
+    "jshint-stylish": "^0.2.0",
+    "load-grunt-tasks": "^0.4.0",
+    "nock": "^0.59.1",
+    "time-grunt": "^0.3.1"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "dependencies": {
+    "request": "^2.53.0"
+  }
+}
