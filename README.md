@@ -21,7 +21,7 @@ Constructor of a new Kimono object.
 
 - `apikey`: your private API key
 
-#### Kimono.retrieve(id [, params], callback)
+#### Kimono.retrieve(id [, params] [, ondemand], callback)
 
 Returns an API object matching a specific API id.
 
@@ -35,6 +35,7 @@ Returns an API object matching a specific API id.
   - `kimhash`: includes an extra unique hash property on every row in the collection
   - `kimseries`: presents the data as a time series across historical results, rather than as a single snapshot in time
   - `kimstats`: includes API crawl statistics in your data
+- `ondemand`: set to `true` if the API should be requested on demand
 - `callback(err, res)`: if `err` is null then the API response is returned in `res`, otherwise an error occured
 
 #### Kimono.list(callback)

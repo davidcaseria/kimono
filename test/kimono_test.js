@@ -37,7 +37,8 @@ describe('Kimono', function () {
       };
       nock('https://www.kimonolabs.com')
         .get('/api/def456?apikey=abc123').reply(200, res)
-        .get('/api/def456?kimlimit=1000&apikey=abc123').reply(200, res);
+        .get('/api/def456?kimlimit=1000&apikey=abc123').reply(200, res)
+        .get('/api/ondemand/def456?apikey=abc123').reply(200, res);
     });
 
     it('should retrieve a specified API', function (done) {
@@ -54,6 +55,16 @@ describe('Kimono', function () {
       kimono.retrieve('def456', {
         kimlimit: 1000
       }, function (err, res) {
+        if (err) {
+          return done(err);
+        }
+        expect(res.id).to.equal('def456');
+        done();
+      });
+    });
+
+    it('should retrieve a specified API on demand', function (done) {
+      kimono.retrieve('def456', true, function (err, res) {
         if (err) {
           return done(err);
         }
